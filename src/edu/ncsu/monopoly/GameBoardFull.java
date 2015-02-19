@@ -22,7 +22,7 @@ public class GameBoardFull extends GameBoard {
         CardCell cc2 = new CardCell(Card.TYPE_CC, "Community Chest 2");
         PropertyCell o2 = new PropertyCell();
         PropertyCell o3 = new PropertyCell();
-        FreeParkingCell fp = new FreeParkingCell();
+        Cell fp = new FreeParkingCell();
         PropertyCell r1 = new PropertyCell();
         CardCell c2 = new CardCell(Card.TYPE_CHANCE, "Chance 2");
         PropertyCell r2 = new PropertyCell();
