@@ -1,15 +1,24 @@
 package edu.ncsu.monopoly;
 
 public class GameBoardJail extends GameBoard {
+	private PropertyCell blue3,green1,green2;
 	public GameBoardJail() {
 		super();
-		PropertyCell blue1 = new PropertyCell();
-		PropertyCell blue2 = new PropertyCell();
-		PropertyCell blue3 = new PropertyCell();
-		PropertyCell green1 = new PropertyCell();
-		PropertyCell green2 = new PropertyCell();
-		JailCell jail = new JailCell();
+		 initPropertyCell();
+
 		GoToJailCell goToJail = new GoToJailCell();
+		addCell(blue1);
+		addCell(jail);
+		addCell(blue2);
+		addCell(blue3);
+		addCell(green1);
+		addCell(goToJail);
+		addCell(green2);
+	}
+	private void initPropertyCell() {
+		 blue3 = new PropertyCell();
+		 green1 = new PropertyCell();
+		 green2 = new PropertyCell();
 		
 		blue1.setName("Blue 1");
 		blue2.setName("Blue 2");
@@ -40,13 +49,5 @@ public class GameBoardJail extends GameBoard {
 		blue3.setHousePrice(50);
 		green1.setHousePrice(70);
 		green2.setHousePrice(70);
-		
-		addCell(blue1);
-		addCell(jail);
-		addCell(blue2);
-		addCell(blue3);
-		addCell(green1);
-		addCell(goToJail);
-		addCell(green2);
 	}
 }

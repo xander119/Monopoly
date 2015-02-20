@@ -24,8 +24,6 @@ public class GameBoard14 extends GameBoard {
 	}
 
 	private void initPropertyCells() {
-		blue1 = new PropertyCell();
-		blue2 = new PropertyCell();
 		blue3 = new PropertyCell();
 		green1 = new PropertyCell();
 		green2 = new PropertyCell();
