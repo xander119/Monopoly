@@ -99,7 +99,7 @@ public class Player {
 		Enumeration colors = colorGroups.keys();
 		while(colors.hasMoreElements()) {
 			String color = (String)colors.nextElement();
-            if(!(color.equals(RailRoadCell.COLOR_GROUP)) && !(color.equals(UtilityCell.COLOR_GROUP))) {
+            if(checkColors(color)) {
     			Integer num = (Integer)colorGroups.get(color);
     			GameBoard gameBoard = GameMaster.instance().getGameBoard();
     			if(num.intValue() == gameBoard.getPropertyNumberForColor(color)) {
@@ -108,6 +108,10 @@ public class Player {
             }
 		}
 		return (String[])monopolies.toArray(new String[monopolies.size()]);
+	}
+
+	private boolean checkColors(String color) {
+		return !(color.equals(RailRoadCell.COLOR_GROUP)) && !(color.equals(UtilityCell.COLOR_GROUP));
 	}
 
 	public String getName() {
@@ -197,7 +201,7 @@ public class Player {
 	public void purchaseHouse(String selectedMonopoly, int houses) {
 		GameBoard gb = GameMaster.instance().getGameBoard();
 		PropertyCell[] cells = gb.getPropertiesInMonopoly(selectedMonopoly);
-		if((money >= (cells.length * (cells[0].getHousePrice() * houses)))) {
+		if(isAfforded(houses, cells)) {
 			for(int i = 0; i < cells.length; i++) {
 				int newNumber = cells[i].getNumHouses() + houses;
 				if (newNumber <= 5) {
@@ -207,6 +211,10 @@ public class Player {
 				}
 			}
 		}
+	}
+
+	private boolean isAfforded(int houses, PropertyCell[] cells) {
+		return money >= (cells.length * (cells[0].getHousePrice() * houses));
 	}
 	
 	private void purchaseProperty(PropertyCell cell) {
