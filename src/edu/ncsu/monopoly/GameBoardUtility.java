@@ -1,15 +1,11 @@
 package edu.ncsu.monopoly;
 
 public class GameBoardUtility extends GameBoard {
-	PropertyCell green1, green2;
-	RailRoadCell rr1, rr3;
 	UtilityCell u1, u2;
-
-	public GameBoardUtility() {
+public GameBoardUtility() {
 		super();
 		iniCells();
-		GoToJailCell goToJail = new GoToJailCell();
-		IOwnable freeParking = new FreeParkingCell();
+		
 
 		addCell(rr1);
 		addCell(blue1);
@@ -25,45 +21,13 @@ public class GameBoardUtility extends GameBoard {
 	}
 
 	private void iniCells() {
-		green1 = new PropertyCell();
-		green2 = new PropertyCell();
-		rr1 = new RailRoadCell();
-		rr3 = new RailRoadCell();
 		u1 = new UtilityCell();
 		u2 = new UtilityCell();
 
-		blue1.setName("Blue 1");
-		blue2.setName("Blue 2");
-		green1.setName("Green 1");
-		green2.setName("Green 2");
-
-		blue1.setColorGroup("blue");
-		blue2.setColorGroup("blue");
-		green1.setColorGroup("green");
-		green2.setColorGroup("green");
-
-		rr1.setName("Railroad A");
-		rr3.setName("Railroad C");
-		RailRoadCell.setPrice(200);
-		RailRoadCell.setBaseRent(25);
 
 		u1.setName("Utility 1");
 		u2.setName("Utility 2");
 		UtilityCell.setPrice(150);
 
-		blue1.setPrice(100);
-		blue2.setPrice(100);
-		green1.setPrice(200);
-		green2.setPrice(240);
-
-		blue1.setRent(10);
-		blue2.setRent(10);
-		green1.setRent(20);
-		green2.setRent(20);
-
-		blue1.setHousePrice(50);
-		blue2.setHousePrice(50);
-		green1.setHousePrice(70);
-		green2.setHousePrice(70);
 	}
 }

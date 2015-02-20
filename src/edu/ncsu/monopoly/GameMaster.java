@@ -95,8 +95,7 @@ public class GameMaster {
 			Player player = getCurrentPlayer();
 			gui.setRollDiceEnabled(false);
 			StringBuffer msg = new StringBuffer();
-			msg.append(player.getName()).append(", you rolled ")
-					.append(rolls[0]).append(" and ").append(rolls[1]);
+			msg.append(player.getName()).append(", you rolled ").append(rolls[0]).append(" and ").append(rolls[1]);
 			gui.showMessage(msg.toString());
 			movePlayer(player, rolls[0] + rolls[1]);
 			gui.setBuyHouseEnabled(false);

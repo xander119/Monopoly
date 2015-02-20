@@ -1,8 +1,8 @@
 package edu.ncsu.monopoly;
 
 public class GameBoard14 extends GameBoard {
-	PropertyCell blue3, green1, green2, green3, red1, red2, red3,
-			purple1, purple2, yellow1, yellow2;
+	PropertyCell green3, red1, red2, red3, purple1,
+			purple2, yellow1, yellow2;
 
 	public GameBoard14() {
 		super();
@@ -36,10 +36,6 @@ public class GameBoard14 extends GameBoard {
 		yellow1 = new PropertyCell();
 		yellow2 = new PropertyCell();
 
-		blue1.setName("Blue 1");
-		blue1.setColorGroup("blue");
-		blue2.setName("Blue 2");
-		blue2.setColorGroup("blue");
 		blue3.setName("Blue 3");
 		blue3.setColorGroup("blue");
 		green1.setName("Green 1");
@@ -63,8 +59,6 @@ public class GameBoard14 extends GameBoard {
 		yellow2.setName("Yellow 2");
 		yellow2.setColorGroup("yellow");
 
-		blue1.setPrice(100);
-		blue2.setPrice(100);
 		blue3.setPrice(120);
 		green1.setPrice(200);
 		green2.setPrice(240);
@@ -77,8 +71,6 @@ public class GameBoard14 extends GameBoard {
 		yellow1.setPrice(400);
 		yellow2.setPrice(420);
 
-		blue1.setRent(10);
-		blue2.setRent(10);
 		blue3.setRent(12);
 		green1.setRent(20);
 		green2.setRent(24);

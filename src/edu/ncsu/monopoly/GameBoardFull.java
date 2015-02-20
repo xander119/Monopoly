@@ -4,21 +4,18 @@ public class GameBoardFull extends GameBoard {
 	private PropertyCell dp1, dp2, dp3, lb1, lb2, lb3, p1, p2, p3, o1, o2, o3,
 			r1, r2, r3, y1, y2, y3, g1, g2, g3, db1, db2, db3;
 	private CardCell c1, c2, cc3, c3, cc2;
-	private RailRoadCell rr1, rr2, rr3, rr4;
 	private UtilityCell u2, u1;
-
 	public GameBoardFull() {
 		super();
 		initPropertyCells();
 		initCardCells();
 		initRailRoadCells();
-
 		initUtilityCell();
 
 		IOwnable fp = new FreeParkingCell();
 
-		JailCell jail = new JailCell();
-		GoToJailCell goToJail = new GoToJailCell();
+		
+		
 
 		addCell(dp1);
 		addCell(cc1);
@@ -87,11 +84,7 @@ public class GameBoardFull extends GameBoard {
 		u2.setName("Water Works");
 	}
 
-	private void initRailRoadCells() {
-		rr1 = new RailRoadCell();
-		rr3 = new RailRoadCell();
-		rr2 = new RailRoadCell();
-		rr4 = new RailRoadCell();
+	protected void initRailRoadCells() {
 		RailRoadCell.setBaseRent(50);
 		RailRoadCell.setPrice(200);
 
