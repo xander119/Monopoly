@@ -1,7 +1,7 @@
 package edu.ncsu.monopoly;
 
 public class GameBoard14 extends GameBoard {
-	PropertyCell blue1, blue2, blue3, green1, green2, green3, red1, red2, red3,
+	PropertyCell blue3, green1, green2, green3, red1, red2, red3,
 			purple1, purple2, yellow1, yellow2;
 
 	public GameBoard14() {

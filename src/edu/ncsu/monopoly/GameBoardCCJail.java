@@ -5,14 +5,8 @@ public class GameBoardCCJail extends GameBoard {
     
     public GameBoardCCJail() {
 		super();
-		PropertyCell blue1 = new PropertyCell();
-		PropertyCell blue2 = new PropertyCell();
-        CardCell cc1 = new CardCell(Card.TYPE_CC, "Community Chest 1");
-        JailCell jail = new JailCell();
-        CardCell chance1 = new CardCell(Card.TYPE_CHANCE, "Chance 1");
-        
+		
         Card ccCard1 = new JailCard(Card.TYPE_CC);
-        Card chanceCard1 = new JailCard(Card.TYPE_CHANCE);
 		
 		blue1.setName("Blue 1");
 		blue2.setName("Blue 2");

@@ -11,6 +11,11 @@ public class GameBoard {
 	private Hashtable colorGroups = new Hashtable();
 	private ArrayList communityChestCards = new ArrayList();
 	private GameMaster gameMaster;
+	protected PropertyCell blue1 = new PropertyCell();
+	protected PropertyCell blue2 = new PropertyCell();
+	protected CardCell cc1 = new CardCell(Card.TYPE_CC, "Community Chest 1");
+	protected JailCell jail = new JailCell();
+	protected CardCell chance1 = new CardCell(Card.TYPE_CHANCE, "Chance 1");
 	
 	public GameBoard() {
 		IOwnable go = new GoCell();
